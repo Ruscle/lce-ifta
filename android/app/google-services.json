@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "547782255873",
+    "project_id": "ifta-tracker-768ce",
+    "storage_bucket": "ifta-tracker-768ce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547782255873:android:17b9c3d52cf96d4e4a2700",
+        "android_client_info": {
+          "package_name": "com.example.fuel_ifta_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547782255873-v2mbtik4hsg24a5am9d4llob1vlou4n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC86exx7VSs7sbV9bV9XPAnai_F0QRm46A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547782255873-v2mbtik4hsg24a5am9d4llob1vlou4n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547782255873:android:21ddef1c698f1ab24a2700",
+        "android_client_info": {
+          "package_name": "com.robertsonconsulting.lceifta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547782255873-v2mbtik4hsg24a5am9d4llob1vlou4n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC86exx7VSs7sbV9bV9XPAnai_F0QRm46A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547782255873-v2mbtik4hsg24a5am9d4llob1vlou4n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
