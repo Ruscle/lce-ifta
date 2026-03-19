@@ -1,24 +1,24 @@
-workflows:
-  ios-release:
-    name: iOS Release Build
-    max_build_duration: 60
+scripts:
+  - name: Get Flutter packages
+    script: flutter pub get
 
-    environment:
-      flutter: stable
-      xcode: latest
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.robertsonconsulting.lceifta
+  - name: Set up code signing
+    script: xcode-project use-profiles
 
-    scripts:
-      - name: Get Flutter packages
-        script: flutter pub get
+  - name: Create export options
+    script: |
+      cat > /Users/builder/exportOptions.plist <<EOF
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>method</key>
+        <string>app-store</string>
+        <key>signingStyle</key>
+        <string>automatic</string>
+      </dict>
+      </plist>
+      EOF
 
-      - name: Set up code signing
-        script: xcode-project use-profiles
-
-      - name: Build iOS IPA
-        script: flutter build ipa --release
-
-    artifacts:
-      - build/ios/ipa/*.ipa
+  - name: Build iOS IPA
+    script: flutter build ipa --release --export-options-plist=/Users/builder/exportOptions.plist
